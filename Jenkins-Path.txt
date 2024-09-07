@@ -1,0 +1,14 @@
+--> If you forget the Password of Jenkins
+  To change the security of the Jenkins <---
+/var/lib/jenkins and go to  config.xml & change
+ <useSecurity>true</useSecurity> to  <useSecurity>false</useSecurity>
+ 
+ *****
+ 
+ 
+--> For the WAR File to deploy
+ To get the option of Deploy war/ear to a container in
+ Post-build Actions:-
+ Install Jenkins Plugin Deploy Container Plugin.
+ Give **/*.war in WAR/EAR file
+ Tomcat URL = http://127.0.0.1:9090 
