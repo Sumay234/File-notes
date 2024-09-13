@@ -1,14 +1,34 @@
 --> If you forget the Password of Jenkins
   To change the security of the Jenkins <---
-/var/lib/jenkins and go to  config.xml & change
+/var/lib/jenkins/config.xml 
+  and go to  config.xml & change
  <useSecurity>true</useSecurity> to  <useSecurity>false</useSecurity>
  
- *****
- 
- 
+********************************************************************************************
+
 --> For the WAR File to deploy
- To get the option of Deploy war/ear to a container in
+ To get the option of Deploy war/ear (Deploy to container Plugin Version) to a container in
  Post-build Actions:-
  Install Jenkins Plugin Deploy Container Plugin.
  Give **/*.war in WAR/EAR file
  Tomcat URL = http://127.0.0.1:9090 
+ 
+****************************************************************************************************
+For Making Jenkins Pipeline in Different Environment Accounts : 
+( Dev + Test+ Pre-prod + Prod )
+Install  Build Pipeline Plugin in Jenkins 
+
+*****************************************************************************************************
+
+## How to change the Jenkins PORT Number
+-> Go to the root
+-> Go to the /etc/sysconfig
+-> Open Jenkins File and change the jenkins port number
+-> Restart Jenkins
+
+
+*************************************************************************************
+
+## Different Branch Deploy
+Choose "This project is parameterized" in General
+*/${BranchName}
