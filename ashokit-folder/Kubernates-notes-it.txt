@@ -240,14 +240,14 @@ K8S Service
 apiVersion: v1
 kind: Service
 metadata:
- name: javawebappsvc
+ name: javawebappsvc (#name of the service)
 spec:
-  type: NodePort
+  type: NodePort (#type of node)
   selector:
-    app: javawebapp # POD lable
+    app: javawebapp # POD lable from k8s yml)
   ports:
-  - port: 80
-    targetPort: 8080
+  - port: 80 (#host-port)
+    targetPort: 8080 (# container port)
 ...
 
 # Display existing services
